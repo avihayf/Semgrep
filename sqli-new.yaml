@@ -1,0 +1,9 @@
+rules:
+- id: SQLi
+  patterns:
+    - pattern: const $X = ...
+    - pattern-regex: |
+        "\$.*
+  message: Possiable SQL Injection detected.
+  languages: [ts]
+  severity: ERROR
